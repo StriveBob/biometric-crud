@@ -18,6 +18,8 @@ class AddPage extends StatefulWidget {
 }
 
 class _AddPage extends State<AddPage> {
+  var bab=['gg','hhh'];
+ 
   final _employee_name = TextEditingController();
   final _employee_position = TextEditingController();
   final _employee_contact = TextEditingController();
@@ -30,7 +32,7 @@ class _AddPage extends State<AddPage> {
         controller: _employee_name,
         autofocus: false,
         validator: (value) {
-          if (value == null || value.trim().isEmpty) {
+          if (value == null || value.isEmpty) {
             return 'This field is required';
           }
         },
@@ -43,7 +45,7 @@ class _AddPage extends State<AddPage> {
         controller: _employee_position,
         autofocus: false,
         validator: (value) {
-          if (value == null || value.trim().isEmpty) {
+          if (value == null || value.isEmpty) {
             return 'This field is required';
           }
         },
@@ -56,7 +58,7 @@ class _AddPage extends State<AddPage> {
         controller: _employee_contact,
         autofocus: false,
         validator: (value) {
-          if (value == null || value.trim().isEmpty) {
+          if (value == null || value.isEmpty) {
             return 'This field is required';
           }
         },
@@ -121,7 +123,7 @@ class _AddPage extends State<AddPage> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: const Text('FreeCode Spot'),
+        title: const Text('Employee CRUD'),
         backgroundColor: Theme.of(context).primaryColor,
       ),
       body: Column(
@@ -134,7 +136,7 @@ class _AddPage extends State<AddPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
+                children: [
                   nameField,
                   const SizedBox(height: 25.0),
                   positionField,

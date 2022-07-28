@@ -42,7 +42,7 @@ class _EditPage extends State<EditPage> {
 
     final DocIDField = TextField(
         controller: _docid,
-        readOnly: true,
+        readOnly: false,
         autofocus: false,
         decoration: InputDecoration(
             contentPadding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
@@ -148,7 +148,7 @@ class _EditPage extends State<EditPage> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: const Text('FreeCode Spot'),
+        title: const Text('EDIT EMPLOYEE DETAILS'),
         backgroundColor: Theme.of(context).primaryColor,
       ),
       body: Column(
